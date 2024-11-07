@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Code-editor</title>
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lemon&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="calc.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="input">
+				<div class="htmlarea">
+					<h1 style="color: red">HTML</h1>
+					<textarea
+						id="html-code"
+						onkeyup="runcode()"
+						spellcheck="false"></textarea>
+				</div>
+				<div class="cssarea">
+					<h1 style="color: blue">CSS</h1>
+					<textarea
+						id="css-code"
+						onkeyup="runcode()"
+						spellcheck="false"></textarea>
+				</div>
+				<div class="jsarea">
+					<h1 style="color: yellow">JS</h1>
+					<textarea
+						id="js-code"
+						onkeyup="runcode()"
+						spellcheck="false"></textarea>
+				</div>
+			</div>
+			<iframe id="output"></iframe>
+		</div>
+
+		<script src="calc.js"></script>
+	</body>
+</html>

@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background-color: #252c4b;
+	font-family: Lemon, Arial, Helvetica, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	padding: 0;
+	overflow: hidden;
+	animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.container {
+	width: 95%;
+	height: 90%;
+	display: flex;
+	border-radius: 8px;
+	overflow: hidden;
+	animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.input {
+	width: 35%;
+	background-color: #232a46;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	transform: translateX(-100%);
+	animation: slideIn 1s ease-out forwards;
+}
+
+.input div {
+	margin: 10px 0;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	transition: all 0.3s ease-in-out;
+}
+
+.input div h1 {
+	background-color: #333c63;
+	color: white;
+	padding: 5px;
+	margin: 0;
+	border-radius: 5px 5px 0 0;
+	text-align: center;
+}
+
+.input div textarea {
+	background-color: #1e253f;
+	color: white;
+	border: none;
+	resize: none;
+	font-size: 16px;
+	padding: 10px;
+	border-radius: 0 0 5px 5px;
+	outline: none;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	height: calc(100% - 10px);
+	transition: all 0.3s ease;
+}
+
+.input div textarea:focus {
+	box-shadow: 0 0 10px rgba(19, 15, 75, 0.7);
+	border: 2px solid #23404f;
+}
+
+#output {
+	flex: 1;
+	background-color: #fff;
+	border: none;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	animation: fadeIn 1s ease-in-out;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+#output.visible {
+	opacity: 1;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: #222;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #444;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #666;
+}
+
+.input div:hover textarea {
+	box-shadow: 0 0 15px rgb(51, 49, 91);
+}
